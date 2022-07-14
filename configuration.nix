@@ -4,6 +4,7 @@
   imports = [
     ./examples/launchTtydOnBoot.nix
     ./examples/launchLnbitsOnBoot.nix
+    ./examples/launchClightningOnBoot.nix
   ];
 
   environment.systemPackages = with pkgs; [ vim git ];

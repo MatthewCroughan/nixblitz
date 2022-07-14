@@ -15,6 +15,21 @@
         "type": "github"
       }
     },
+    "flake-utils_2": {
+      "locked": {
+        "lastModified": 1656065134,
+        "narHash": "sha256-oc6E6ByIw3oJaIyc67maaFcnjYOz1mMcOtHxbEf9NwQ=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "bee6a7250dd1b01844a2de7e02e4df7d8a0a206c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
     "lnbits": {
       "inputs": {
         "nixpkgs": "nixpkgs",
@@ -35,6 +50,26 @@
         "type": "github"
       }
     },
+    "nix-bitcoin": {
+      "inputs": {
+        "flake-utils": "flake-utils_2",
+        "nixpkgs": "nixpkgs_3",
+        "nixpkgsUnstable": "nixpkgsUnstable"
+      },
+      "locked": {
+        "lastModified": 1657313857,
+        "narHash": "sha256-pbyNHXrOxYf+cBwhuUz/Y+AVWXpRRWa2Ehyylfy3WDY=",
+        "owner": "fort-nix",
+        "repo": "nix-bitcoin",
+        "rev": "7e94b7eddcea2e9c5a21f9930176fff33ce85597",
+        "type": "github"
+      },
+      "original": {
+        "owner": "fort-nix",
+        "repo": "nix-bitcoin",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1657114324,
@@ -47,6 +82,22 @@
       "original": {
         "owner": "nixos",
         "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgsUnstable": {
+      "locked": {
+        "lastModified": 1656755932,
+        "narHash": "sha256-TGThfOxr+HjFK464+UoUE6rClp2cwxjiKvHcBVdIGSQ=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "660ac43ff9ab1f12e28bfb31d4719795777fe152",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -67,6 +118,22 @@
       }
     },
     "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1656679828,
+        "narHash": "sha256-akGA97pR1BAQew1FrVTCME3p8qvYxJXB2X3a13aBphs=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "915f5a5b3cc4f8ba206afd0b70e52ba4c6a2796b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-22.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_4": {
       "locked": {
         "lastModified": 1657654771,
         "narHash": "sha256-uIGbt+rU89aTlSx8+4g9vKioWc8nmCCcaaFCNPHM07c=",
@@ -104,7 +171,8 @@
     "root": {
       "inputs": {
         "lnbits": "lnbits",
-        "nixpkgs": "nixpkgs_3"
+        "nix-bitcoin": "nix-bitcoin",
+        "nixpkgs": "nixpkgs_4"
       }
     }
   },
