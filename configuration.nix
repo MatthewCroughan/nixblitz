@@ -7,6 +7,12 @@
     ./examples/launchClightningOnBoot.nix
   ];
 
+  boot = {
+    kernelPackages = pkgs.linuxPackages_latest;
+    kernelModules = lib.mkForce [ "bridge" "macvlan" "tap" "tun" "loop" "atkbd" "ctr" ];
+    supportedFilesystems = lib.mkForce [ "btrfs" "reiserfs" "vfat" "f2fs" "xfs" "ntfs" "cifs" "ext4" "vfat" ];
+  };
+
   environment.systemPackages = with pkgs; [ vim git ];
 
   networking = {
